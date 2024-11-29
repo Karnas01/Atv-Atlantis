@@ -1,8 +1,6 @@
 import Processo from "../abstracoes/processo";
+import CadastroAcomodacoes from "../processos/cadastros/cadastroAcomodacoes/cadastroAcomodacoes";
 import Principal from "../processos/tipos/principal";
-import Entrada from "../io/entrada";
-import TipoCadastroCliente from "../processos/tipos/tipoCadastroCliente";
-import TipoListagemClientes from "../processos/tipos/tipoListagemClientes";
 
 console.clear()
 console.log(`Bem-vindo(a) ao melhor sistema de gestão de clubes, hotéis e resorts do mundo, o Atlantis :)`);
@@ -10,9 +8,11 @@ console.log(`Bem-vindo(a) ao melhor sistema de gestão de clubes, hotéis e reso
 let processo: Processo
 let execucao: Boolean = true
 
+processo = new CadastroAcomodacoes()
+processo.processar()
+
 while (execucao) {
     processo = new Principal()
     processo.processar()
     execucao = processo.Execucao
-  
 }

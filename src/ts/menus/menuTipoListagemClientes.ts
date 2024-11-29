@@ -1,3 +1,4 @@
+import { log } from "console";
 import Menu from "../interfaces/menu";
 
 export default class MenuTipoListagemClientes implements Menu {
@@ -8,7 +9,8 @@ export default class MenuTipoListagemClientes implements Menu {
         console.log(`----------------------`)
         console.log(`| 1 - Todos os titulares`)
         console.log(`| 2 - Todos os dependentes de um titular específico`)
-        console.log(`| 3 - Titular para dependente específico`);
+        console.log(`| 3 - Titular para dependente expecífico`);
+        console.log(`| 4 - Cancelar`);
         console.log(`----------------------`)
     }
 }
